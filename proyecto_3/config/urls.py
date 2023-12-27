@@ -22,5 +22,6 @@ urlpatterns = [
     path ("nombre/<nombre>/<apellido>",nombre),
     path ('fecha/',fecha_hora),
     path ("tirar_dado/",tirar_dado),
-    path('', include("entrega3.urls"))
+    path('', include("entrega3.urls")),
+    path("clientes/",include("Cliente.urls")),
 ]

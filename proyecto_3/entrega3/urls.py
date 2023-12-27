@@ -17,6 +17,8 @@ Including another URLconf
 
 from django.urls import path
 from .views import index
+app_name = "entrega3"
+
 urlpatterns = [
-    path ('',index)
+    path ('',index, name= "index")
     ]
