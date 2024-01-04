@@ -1,3 +1,4 @@
+from typing import Any
 from django.db import models
 
 # Create your models here.
@@ -15,6 +16,6 @@ class Cliente(models.Model):
     apellido = models.CharField(max_length= 100)
     nacimiento = models.DateField(null = True, blank = True)
     pais_origen_id= models.ForeignKey(Pais, null = True, blank= True, on_delete = models.SET_NULL,verbose_name= "pais de origen")
-    
+
     def __str__(self) -> str:
         return f"{self.apellido},{self.nombre}"
